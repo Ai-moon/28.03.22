@@ -1,0 +1,18 @@
+public class ZywOo {
+  public static int sumOfDifferences(int[] arr) {
+    for (int j = 0; j < arr.length -1; j++){
+     for (int i = 0; i < arr.length -1-j; i++) {
+            if (arr[i] < arr[i + 1]) {
+                int x_0 = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = x_0;                
+            }
+    }
+  }
+    int sum = 0;
+    for(int i = 0; i < arr.length - 1; i++){
+      sum += arr[i] - arr[i + 1];
+    }
+    return sum;
+  }
+}
